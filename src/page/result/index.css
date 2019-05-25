@@ -1,0 +1,27 @@
+.page-wrap{
+    padding : 30px 0;
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.page-wrap .result-con{
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+
+}
+.page-wrap .link{
+    font-size: 10px;
+    border: 1px solid;
+}
+
+.register-success{
+    display: none;
+}
+.login-success{
+    display: none;
+}
+.default-success{
+    display: none;
+}

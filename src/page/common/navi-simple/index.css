@@ -1,0 +1,36 @@
+.navi-simple{
+    height: 60px;
+    background: rgb(255, 255, 255);
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    color : rgb(255, 2, 2);
+} 
+.navi-simple .logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #c60023;
+}
+.nav{
+    font-size : 10px;
+    background: #eee;
+    height: 30px;
+    line-height: 30px;
+}
+.nav .user{
+    float : left;
+}
+.nav .nav-list{
+    float: right;
+}
+.nav .nav-list .nav-item{
+    display : inline-block;
+    margin-right: 5px;
+}
+
+.nav .user .link{
+    margin-right: 5px;
+}
+
+.nav .user.login{
+    display:none;
+}

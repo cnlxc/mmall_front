@@ -1,0 +1,16 @@
+.nav-side{
+    min-height: 20px;
+    float: left;
+    width: 130px;
+}
+
+.nav-side .nav-item{
+    line-height: 20px;
+    font-size: 13px;
+}
+.nav-side .nav-item .link{
+    color:#777;
+}
+.nav-side .nav-item.active .link{
+    color:#c60023;
+}
