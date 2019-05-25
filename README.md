@@ -1,4 +1,2 @@
-# hellow-world
-just author repository
-thr second trying
-tasuketa
+mall front 
+developing
