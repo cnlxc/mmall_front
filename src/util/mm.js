@@ -1,35 +1,42 @@
 'use strict';
 var conf ={
-    serverHost : ''
+    serverHost : 'http://localhost:8001',
+    frontHost : 'http://localhost:8088/dist/view/'
 };
 var Hongan = require('hogan.js'); 
 var _mm = {
     request : function(param){
-
+        var _this = this;
       $.ajax({
-          type      : param.method || 'get',
+          type      : param.method || 'post',
           url       : param.url    || '',
           dataType  : param.type   ||  'json',
           data      : param.data   ||  '',
-          sucess    : function(res){
-                if(0=== res.status){
-                  typeof param.sucess === 'function' && param.sucess(res.data,res.msg);
+          success    : function(res){
+            console.log(res.status + res.msg);
+                if(0 == res.status){
+                  typeof param.success === 'function' && param.success(res.msg);
                 //10表示没有登陆 
-                }else if(10 === res.status){
-                    doLogin();
-                }else if(1=== res.status){
-                    typeof param.error === 'function' && param.error(res.data,res.msg);
+                }else if(10 == res.status){
+                    _this.doLogin();
+                }else if(1 == res.status){
+                    typeof param.error === 'function' && param.error(res.msg);
+                }else{
+                    console.log('???? return status not in (0,1,10) contact backend programer');
                 }
+
           },
           error    : function(err){
-            typeof param.error === 'function' && param.error(err.status);
+              console.log("error function");
+            typeof param.error === 'function' && param.error(err.statusText);
           }
       });
-
-      console.log('why nothing happend');
     },
     getServerUrl : function(path){
         return conf.serverHost + path;
+    },
+    getFrontUrl : function(path){
+        return conf.frontHost + path;
     },
     getUrlParam : function(name){
         var reg = new RegExp('(&|^)'+name+'=([^&]*)(&|$)');
@@ -60,6 +67,7 @@ var _mm = {
     },
     //统一跳转页面
     doLogin : function(){
+
         window.location.href = './user-login.html?redirect='+ encodeURIComponent(window.location.href);
     },
     //回到主页

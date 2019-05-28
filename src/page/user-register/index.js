@@ -44,9 +44,13 @@ var page = {
         var formData = {
             
             username : $.trim($('#username').val()),
-            password : $.trim($('#password').val())
+            password : $.trim($('#password').val()),
+            email    : $.trim($('#email').val()),
+            phone    : $.trim($('#phone').val()),
+            question : $.trim($('#question').val()),
+            answer   : $.trim($('#key').val()),
         };
-        console.log(formData.username + formData.password);
+
         var validateResult = this.formValidate(formData);
         //验证通过进行登陆
         if(validateResult.status){
@@ -78,6 +82,23 @@ var page = {
             result.msg = '密码不能为空';
             return result;
         }
+        if(!_mm.validate(formData.email,'email')){
+            result.msg = '邮箱格式错误';
+            return result;
+        }
+        if(!_mm.validate(formData.phone,'phone')){
+            result.msg = '手机号不正确';
+            return result;
+        }
+        if(!_mm.validate(formData.question,'require')){
+            result.msg = '问题不能为空';
+            return result;
+        }
+        if(!_mm.validate(formData.answer,'require')){
+            result.msg = '问题答案不能为空';
+            return result;
+        }
+        
         result.status = true;
         result.msg = '验证通过';
         return result;

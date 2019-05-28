@@ -32,6 +32,19 @@ var _user = {
             error   : reject
         });
     },
+    //用户注册
+    register : function(registerInfo,resolve,reject){
+        _mm.request({
+            data    : registerInfo,
+            url     : _mm.getServerUrl('/user/register.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        }
+
+        );
+
+    }
 
 }
 
