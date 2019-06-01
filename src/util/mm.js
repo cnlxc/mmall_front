@@ -8,14 +8,17 @@ var _mm = {
     request : function(param){
         var _this = this;
       $.ajax({
-          type      : param.method || 'post',
+          type      : param.method || 'get',
           url       : param.url    || '',
           dataType  : param.type   ||  'json',
           data      : param.data   ||  '',
+          xhrFields :{withCredentials : true},//跨域请求携带cookie
           success    : function(res){
-            console.log(res.status + res.msg);
+            console.log("对于请求"+param.url+"的结果");
+            console.log(res)
                 if(0 == res.status){
-                  typeof param.success === 'function' && param.success(res.msg);
+                    ;
+                  typeof param.success === 'function' && param.success(res);
                 //10表示没有登陆 
                 }else if(10 == res.status){
                     _this.doLogin();

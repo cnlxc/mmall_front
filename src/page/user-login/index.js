@@ -3,10 +3,9 @@
 var _css = require('./index.css');
 var _mm = require('../../util/mm.js');
 var header = require('../common/header/index.js');
-var nav_side = require('../common/nav-side/index.js');
-nav_side.init({name : 'user-center'});
+var header = require('../common/navi-simple/index.js');
+var _user = require('../../service/user-service.js');
 var footer = require('../common/footer/footer.css');
-var _user = require('../../service/user-service');
 
 var formError = {
     show : function(errorMsg){
@@ -40,7 +39,7 @@ var page = {
         );
     },
     submmit : function(){
-        
+        console.log("submmit function")
         var formData = {
             
             username : $.trim($('#username').val()),

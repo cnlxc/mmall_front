@@ -1,6 +1,7 @@
 'use strict';
 
 require('./index.css');
+require('./logo.css');
 var _mm = require('../../../util/mm.js');
 var _user = require('../../../service/user-service.js');
 var _cart = require('../../../service/cart-service.js')
@@ -35,7 +36,7 @@ var nav={
             function(res){
                 //check成功的处理函数定义，即把用户名字赋予到相应位置
                 $('.user.not-login').hide().siblings('.user.login').show()
-                    .find('.username').text(res.username);
+                    .find('.username').text(res.data.username);
             },function(errMsg){
                 //do nothing
             }
@@ -45,7 +46,7 @@ var nav={
     loadCartCount : function(){
         _cart.getCartCount(
             function(res){
-                $('.cart-count').text(res || 0);
+                $('.cart-count').text(res.data || 0);
             },
             function(errMsg){
                 $('.cart-count').text(0);

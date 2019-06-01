@@ -3,10 +3,9 @@
 var _css = require('./index.css');
 var _mm = require('../../util/mm.js');
 var header = require('../common/header/index.js');
-var nav_side = require('../common/nav-side/index.js');
-nav_side.init({name : 'user-center'});
+var logo = require('../common/navi-simple/logo.css');
 var footer = require('../common/footer/footer.css');
-var _user = require('../../service/user-service');
+var _user = require('../../service/user-service.js');
 
 var formError = {
     show : function(errorMsg){
@@ -27,19 +26,19 @@ var page = {
         var _this = this;
         $('#submit').click(
             function(){
-                _this.submmit();
+                _this.submit();
             }
         );
         $('.user-content').keyup(
             function(e){
                 //在用户信息处按下回车的话也会提交
                 if(e.keyCode === 13){
-                    _this.submmit();
+                    _this.submit();
                 }
             }
         );
     },
-    submmit : function(){
+    submit : function(){
         
         var formData = {
             
@@ -54,12 +53,12 @@ var page = {
         var validateResult = this.formValidate(formData);
         //验证通过进行登陆
         if(validateResult.status){
-            _user.login(
+            _user.register(
                 formData,//登陆数据
                 function(res){//成功操作
                     //window.location.href = _mm.getUrlParam('redirect') || './index.html';
                     console.log('success but not affect');
-                    window.location.href = _mm.getFrontUrl('index.html');
+                    window.location.href = _mm.getFrontUrl('user-login.html');
                 },
                 function(errMsg){//失败操作
                  formError.show(errMsg);

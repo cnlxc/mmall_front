@@ -1,0 +1,15 @@
+.navi-simple{
+    height: 60px;
+    background: rgb(255, 255, 255);
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    color : rgb(255, 2, 2);
+} 
+.navi-simple.logo{
+ 
+        color: #c60023;
+        font-size: 30px;
+        top: 25px;
+        font-weight: bolder;
+        display: block;
+}
