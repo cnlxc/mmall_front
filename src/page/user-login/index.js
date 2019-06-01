@@ -3,7 +3,6 @@
 var _css = require('./index.css');
 var _mm = require('../../util/mm.js');
 var header = require('../common/header/index.js');
-var header = require('../common/navi-simple/index.js');
 var _user = require('../../service/user-service.js');
 var footer = require('../common/footer/footer.css');
 

@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%= require('html-loader!./layout/head-common.html')%>
+
     <title><%= htmlWebpackPlugin.options.title%>-mall平台</title>
 </head>
 
 <body>
-    <%= require('html-loader!./layout/navi.html')%>
 
-    <div class='page-wrap w'>
+
+    <div class="page-wrap w">
         <div class="register-success">
             <div class="result-con">恭喜您,注册成功</div>
             <a class="result-con link" href="http://localhost:8088/dist/view/">回到首页</a>
+            <a class="result-con link" href="http://localhost:8088/dist/view/user-login.html">马上登陆</a>
         </div>
         <div class="login-success">
             <div class="result-con">恭喜您,登陆成功</div>
             <a class="result-con link" href="http://localhost:8088/dist/view/">回到首页</a>
+            <a class="result-con link" href="http://localhost:8088/dist/view/user-login.html">马上登陆</a>
         </div>
         <div class="default-success">
             <div class="result-con">恭喜您,操作成功</div>
             <a class="result-con link" href="http://localhost:8088/dist/view/">回到首页</a>
+            <a class="result-con link" href="http://localhost:8088/dist/view/user-login.html">马上登陆</a>
+        </div>
+        <div class="pass-reset-success">
+            <div class="result-con">恭喜您,密码重置成功</div>
+            <a class="result-con link" href="http://localhost:8088/dist/view/index.html">回到首页</a>
+            <a class="result-con link" href="http://localhost:8088/dist/view/user-login.html">马上登陆</a>
         </div>
         
     </div>

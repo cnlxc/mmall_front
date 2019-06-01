@@ -14,7 +14,7 @@ var _mm = {
           data      : param.data   ||  '',
           xhrFields :{withCredentials : true},//跨域请求携带cookie
           success    : function(res){
-            console.log("对于请求"+param.url+"的结果");
+            console.log("对于请求"+param.url+" "+param.data+"的结果");
             console.log(res)
                 if(0 == res.status){
                     ;

@@ -44,6 +44,37 @@ var _user = {
 
         );
 
+    },
+    //拿到提示问题
+    get_question : function(username,resolve,reject){
+        _mm.request({
+            data    : {username : username},
+            url     : _mm.getServerUrl('/user/forget_get_question.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+
+    },
+    check_anwser : function(checkedInfo,resolve,reject){
+        _mm.request({
+            data    : checkedInfo,
+            url     : _mm.getServerUrl('/user/forget_check_answer.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+
+    },
+    resetPassword : function(newPassword,resolve,reject){
+        _mm.request({
+            data    : newPassword,
+            url     : _mm.getServerUrl('/user/forget_password_reset.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject 
+            }
+        );
     }
 
 }

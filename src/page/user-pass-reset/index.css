@@ -83,5 +83,8 @@
 
 .hint-label{
     margin-bottom: 5px;
-    font-size : 12px;
+    font-size : 15px;
+}
+.question {
+    font-size: 15px;
 }
