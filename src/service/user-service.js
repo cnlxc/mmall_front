@@ -75,6 +75,24 @@ var _user = {
             error   : reject 
             }
         );
+    },
+    getUserInfo : function(resolve,reject){
+        _mm.request({
+
+            url   : _mm.getServerUrl('/user/get_information.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject 
+        });
+    },
+    updateUserInfo : function(updateUserInfo,resolve,reject){
+        _mm.request({
+            data   : updateUserInfo,
+            url   : _mm.getServerUrl('/user/update_information.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject 
+        });
     }
 
 }

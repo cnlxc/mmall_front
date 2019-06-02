@@ -1,11 +1,17 @@
+.header{
+    margin: 0 auto;
+    width: 30%;
+}
 .header .logo{
     float: left;
     color : #c60023;
     font-size: 30px;
+    
     position: absolute;
     top: 25px;
     font-weight: bolder;
     display: block;
+    text-decoration: none;
 }
 .header .search-con{
     padding: 20px 90px;
@@ -16,6 +22,7 @@
     font-size: 15px;
     border : 2px solid #c60023;
     height: 40px;
+    width: 350px;
     outline: none;
 }
 .header .search-con .search-button{

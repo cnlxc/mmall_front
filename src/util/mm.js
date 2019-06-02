@@ -55,7 +55,7 @@ var _mm = {
         alert(msg+ "operation success!");
     },
     errorTips : function(msg){
-        alert(msg+"something is not correct...");
+        alert(msg+"  something is not correct...");
     },
     validate : function(data,type){
         if(type === 'require'){
