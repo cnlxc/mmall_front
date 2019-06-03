@@ -1,0 +1,25 @@
+'use strict'
+
+var _css = require('./index.css');
+var _mm = require('../../util/mm.js');
+var _user = require('../../service/user-service.js');
+var navi_simple = require('../common/navi-simple/index.js');
+var header = require('../common/header/index.js');
+var nav_side = require('../common/nav-side/index.js');
+//nav_side.init({name : 'user-center'});
+var footer = require('../common/footer/footer.css');
+
+var page = {
+    init : function(){
+        this.load();
+    },
+    load : function(){
+        nav_side.init({name : 'user-pass-update'});
+    },
+  
+
+}
+
+$(function (){
+    page.init();
+});

@@ -93,6 +93,15 @@ var _user = {
             success : resolve,
             error   : reject 
         });
+    },
+    updatePassword : function(formData,resolve,reject){//看API
+        _mm.request({
+            data   : formData,
+            url   : _mm.getServerUrl('/user/**.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject 
+        });
     }
 
 }
