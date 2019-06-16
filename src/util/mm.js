@@ -4,6 +4,7 @@ var conf ={
     frontHost : 'http://localhost:8088/dist/view/'
 };
 var Hongan = require('hogan.js'); 
+var unloginMsg = "用户未登录，无法获取用户信息";
 var _mm = {
     request : function(param){
         var _this = this;
@@ -23,6 +24,9 @@ var _mm = {
                 }else if(10 == res.status){
                     _this.doLogin();
                 }else if(1 == res.status){
+                    if(unloginMsg == res.msg){
+                        _this.doLogin();
+                    }
                     typeof param.error === 'function' && param.error(res.msg);
                 }else{
                     console.log('???? return status not in (0,1,10) contact backend programer');

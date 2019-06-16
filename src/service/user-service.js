@@ -97,7 +97,7 @@ var _user = {
     updatePassword : function(formData,resolve,reject){//看API
         _mm.request({
             data   : formData,
-            url   : _mm.getServerUrl('/user/**.do'),
+            url   : _mm.getServerUrl('/user/password_reset.do'),
             method  : 'POST',
             success : resolve,
             error   : reject 
