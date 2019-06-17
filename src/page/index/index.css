@@ -26,3 +26,95 @@ input[type='checkbox']{
     overflow: hidden;
 
 }
+
+.keywords-list{
+    float: left;
+    width: 240px;
+    height: 350;
+    background-color: #666;
+
+}
+.keywords-list .keywords-item{
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+}
+.keywords-list .keywords-item .link{
+    margin-left: 10px;
+    margin-right: 6px;
+    color: #fff;
+}
+/**zhege hover 没生效*/
+.keywords-list .keywords-item:hover{
+    color: #9c9798;
+}
+.keywords-list .keywords-item .link:hover{
+    color: #c60023;
+}
+.banner-con{
+    float: left;
+
+}
+.banner-con .loading{
+    margin-top: 150px;
+    margin-left: 400px;
+}
+
+/*banner mada*/
+
+/*floor*/
+.floor-wrap .floor-title{
+    height: 50px;
+    line-height: 50px;
+    color: #d58717;
+    font-weight: normal;
+    border-bottom: 1px solid #d58717;
+    font-size: 20px;
+}
+/* 更改各楼层标题颜色 */
+.floor-wrap:nth-child(2) .floor-title{
+    color: #3b838c;
+    border-bottom: 1px solid #3b838c;
+}
+.floor-wrap:nth-child(3) .floor-title{
+    color: #a93931;
+    border-bottom: 1px solid #a93931;
+}
+.floor-wrap:nth-child(4) .floor-title{
+    color: #488bad;
+    border-bottom: 1px solid #488bad;
+}
+.floor-wrap:nth-child(5) .floor-title{
+    color: #642663;
+    border-bottom: 1px solid #642663;
+}
+.floor-wrap .floor-list .floor-text{
+    top: 12px;
+    left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.floor-wrap .floor-list{
+    margin-right: -20px;
+    overflow: hidden;
+}
+.floor-wrap .floor-list .floor-item{
+    position: relative;
+    width: 200px;
+    height: 220px;
+    margin: 15px 20px 15px 0;
+    float: left;
+    cursor: pointer;
+    background: #fff;
+}
+.floor-wrap .floor-list .floor-item:hover{
+    box-shadow: 1px 1px 7px rgb(167, 105, 105);
+}
+
+a:link {color: #555} /* 未被访问的链接*/
+a:visited {color: #555} /* 已被访问过的链接*/
+a:hover {color: #555} /* 鼠标悬浮在上的链接*/
+a:active {color: #555} /* 鼠标点中激活链接*/
