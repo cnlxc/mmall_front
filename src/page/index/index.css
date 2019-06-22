@@ -29,6 +29,7 @@ input[type='checkbox']{
 
 .keywords-list{
     float: left;
+    margin-right: 10px;
     width: 240px;
     height: 350;
     background-color: #666;
@@ -53,10 +54,7 @@ input[type='checkbox']{
 .keywords-list .keywords-item .link:hover{
     color: #c60023;
 }
-.banner-con{
-    float: left;
 
-}
 .banner-con .loading{
     margin-top: 150px;
     margin-left: 400px;
@@ -110,6 +108,10 @@ input[type='checkbox']{
     cursor: pointer;
     background: #fff;
 }
+.floor-img{
+    width: 200px;
+    height: 220px;
+}
 .floor-wrap .floor-list .floor-item:hover{
     box-shadow: 1px 1px 7px rgb(167, 105, 105);
 }
@@ -118,3 +120,27 @@ a:link {color: #555} /* 未被访问的链接*/
 a:visited {color: #555} /* 已被访问过的链接*/
 a:hover {color: #555} /* 鼠标悬浮在上的链接*/
 a:active {color: #555} /* 鼠标点中激活链接*/
+/* banner的前一张和后一张按钮 */
+.banner-con .banner-arrow{
+    position: absolute; 
+    top:160px;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    background: #ccc;
+    background: rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.banner-con .banner-arrow:hover{
+    background: #aaa;
+    background: rgba(0,0,0,.5);
+}
+.banner-con .banner-arrow.prev{
+    left: 0;
+}
+.banner-con .banner-arrow.next{
+    right: 0;
+}
