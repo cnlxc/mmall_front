@@ -2,27 +2,27 @@
     <ul>
         <li>
             <a href="./list.html/?categoryId=100021" >
-                <img class="banner-img" src="../../image/banner/banner1.jpg"  />
+                <img class="banner-img" src="../../image/banner/banner1.jpg" height="200" width="300" />
             </a>
         </li>
         <li>
             <a href="./list.html/?categoryId=100021" >
-                <img class="banner-img" src="../../image/banner/banner2.jpg"  />
+                <img class="banner-img" src="../../image/banner/banner2.jpg" height="200" width="300" />
             </a>
         </li>
         <li>
             <a href="./list.html/?categoryId=100021" >
-                <img class="banner-img" src="../../image/banner/banner3.jpg"  />
+                <img class="banner-img" src="../../image/banner/banner3.jpg" height="200" width="300" />
             </a>
         </li>
         <li>
             <a href="./list.html/?categoryId=100021" >
-                <img class="banner-img" src="../../image/banner/banner4.jpg"  />
+                <img class="banner-img" src="../../image/banner/banner4.jpg" height="200" width="300" />
             </a>
         </li>
         <li>
             <a href="./list.html/?categoryId=100021" >
-                <img class="banner-img" src="../../image/banner/banner5.jpg"  />
+                <img class="banner-img" src="../../image/banner/banner5.jpg" height="200" width="300" />
             </a>
         </li>
     </ul>

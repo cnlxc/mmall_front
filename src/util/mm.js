@@ -7,6 +7,7 @@ var Hongan = require('hogan.js');
 var unloginMsg = "用户未登录，无法获取用户信息";
 var _mm = {
     request : function(param){
+        console.log(param.data);
         var _this = this;
       $.ajax({
           type      : param.method || 'get',
@@ -18,7 +19,7 @@ var _mm = {
             console.log("对于请求"+param.url+" "+param.data+"的结果");
             console.log(res)
                 if(0 == res.status){
-                    ;
+                    
                   typeof param.success === 'function' && param.success(res);
                 //10表示没有登陆 
                 }else if(10 == res.status){

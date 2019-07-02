@@ -13,13 +13,25 @@
 
 
 .banner-con{
-    margin-left: 10px;
     width: 830px;
     height: 370px;
     background: #eee;
 
 }
-.banner-img{width: 100%;height: 450px;}
+/* banner-con */
+.banner-con{
+    width: 830px;
+    float: left;
+    height: 450px;
+    background: #eee;
+}
+.banner-con .loading{
+    margin-top: 150px;
+}
+.banner-con .banner-img{
+    width: 100%;
+    height: 450px;
+}
 .banner li { 
     list-style: none; 
 }

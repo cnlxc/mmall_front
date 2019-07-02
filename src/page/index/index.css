@@ -120,6 +120,7 @@ a:link {color: #555} /* 未被访问的链接*/
 a:visited {color: #555} /* 已被访问过的链接*/
 a:hover {color: #555} /* 鼠标悬浮在上的链接*/
 a:active {color: #555} /* 鼠标点中激活链接*/
+
 /* banner的前一张和后一张按钮 */
 .banner-con .banner-arrow{
     position: absolute; 
